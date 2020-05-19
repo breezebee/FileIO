@@ -4,15 +4,18 @@ import java.io.*;
 
 /**
  * Created by sherxon on 4/23/17. https://github.com/sherxon/AlgoDS/tree/master/src/oi
- */
+ */ 
 public class UsingBufferedReader {
     public static void main(String[] args) throws IOException {
-
+    	
+    	String fileName1 = args[0];
+    	String fileName2 = args[1];
 
         //-------------- Test reading 1 MB file. --------------------
-
+    	System.out.println("First File name:" + fileName1);
+    	
         StopWatch.start();
-
+        
         BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
         while (inputStream.read()!=-1){}
 
@@ -23,7 +26,8 @@ public class UsingBufferedReader {
 
 
         //-------------- Test reading 10 MB file. --------------------
-
+    	System.out.println("Second File name:" + fileName2);
+    	
         StopWatch.start();
 
         BufferedReader inputStream2= new BufferedReader(new FileReader(DumpDataWriter.input10MB));
